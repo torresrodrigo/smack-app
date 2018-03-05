@@ -7,7 +7,7 @@
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Pods-Smack-App.xcscheme</key>
 		<dict>
@@ -20,6 +20,11 @@
 			<integer>3</integer>
 		</dict>
 		<key>Starscream.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>StarscreamSocketIO.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
