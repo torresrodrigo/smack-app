@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		005ECF897732C66187D3F5CC /* Pods_Smack_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCADC5350FFB9DEFE12CF9A8 /* Pods_Smack_App.framework */; };
+		8819A670204CE43200B6ED58 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8819A66F204CE43200B6ED58 /* GradientView.swift */; };
 		88422193204C8FD500E34229 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88422192204C8FD500E34229 /* AppDelegate.swift */; };
 		88422198204C8FD500E34229 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88422196204C8FD500E34229 /* Main.storyboard */; };
 		8842219A204C8FD500E34229 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88422199204C8FD500E34229 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8819A66F204CE43200B6ED58 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8842218F204C8FD500E34229 /* Smack-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smack-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88422192204C8FD500E34229 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88422197204C8FD500E34229 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		8844F3FD204CA27000919CC7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8819A66F204CE43200B6ED58 /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				8844F402204CA32E00919CC7 /* ChannelVC.swift in Sources */,
 				8844F400204CA31C00919CC7 /* ChatVC.swift in Sources */,
+				8819A670204CE43200B6ED58 /* GradientView.swift in Sources */,
 				88422193204C8FD500E34229 /* AppDelegate.swift in Sources */,
 				8844F3FB204C9D8500919CC7 /* SWRevealViewController.m in Sources */,
 			);

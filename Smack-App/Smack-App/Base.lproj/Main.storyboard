@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
             <string>AvenirNext-Medium</string>
+            <string>AvenirNext-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -19,11 +21,14 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8X5-gZ-a4L"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Oi-wp-e9S"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <segue destination="nO3-k9-rxU" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="1Ti-s0-2fv"/>
@@ -38,27 +43,89 @@
         <scene sceneID="dcg-Yo-Fv8">
             <objects>
                 <viewController id="nO3-k9-rxU" customClass="ChannelVC" customModule="Smack_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nkD-ja-3i7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iAU-b0-SmR"/>
+                        <viewControllerLayoutGuide type="bottom" id="IrM-eC-73g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="nkD-ja-3i7" customClass="GradientView" customModule="Smack_App" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xQ-i0-7Tb">
+                                <rect key="frame" x="16" y="95" width="77" height="25"/>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vds-6o-Z9e">
+                                <rect key="frame" x="281" y="96.5" width="22" height="22"/>
+                                <state key="normal" image="addChannelButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUK-Jb-IWE">
+                                <rect key="frame" x="111" y="587" width="63" height="45"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="hSV-vk-n2y">
+                                <rect key="frame" x="16" y="572" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="K3F-0i-1fH"/>
+                                    <constraint firstAttribute="width" constant="75" id="og9-BB-SFL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUZ-PH-DpA">
+                                <rect key="frame" x="16" y="44" width="70.5" height="31.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="23"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q3f-dI-itN">
+                                <rect key="frame" x="0.0" y="95.5" width="375" height="456.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="W9Q-Yb-v3w"/>
+                        <constraints>
+                            <constraint firstItem="q3f-dI-itN" firstAttribute="leading" secondItem="nkD-ja-3i7" secondAttribute="leading" id="2DK-Yl-aBI"/>
+                            <constraint firstItem="hSV-vk-n2y" firstAttribute="top" secondItem="q3f-dI-itN" secondAttribute="bottom" constant="20" id="3S5-Ju-i75"/>
+                            <constraint firstAttribute="trailing" secondItem="vds-6o-Z9e" secondAttribute="trailing" constant="72" id="3g4-MI-6kX"/>
+                            <constraint firstItem="hSV-vk-n2y" firstAttribute="leading" secondItem="nkD-ja-3i7" secondAttribute="leadingMargin" id="8JQ-Bz-NP9"/>
+                            <constraint firstItem="iUK-Jb-IWE" firstAttribute="centerY" secondItem="hSV-vk-n2y" secondAttribute="centerY" id="8Xj-jU-bjA"/>
+                            <constraint firstItem="1xQ-i0-7Tb" firstAttribute="leading" secondItem="nkD-ja-3i7" secondAttribute="leadingMargin" id="IrX-gy-1IH"/>
+                            <constraint firstItem="iUK-Jb-IWE" firstAttribute="leading" secondItem="hSV-vk-n2y" secondAttribute="trailing" constant="20" id="KXX-ap-pdr"/>
+                            <constraint firstItem="sUZ-PH-DpA" firstAttribute="leading" secondItem="nkD-ja-3i7" secondAttribute="leadingMargin" id="KYb-jT-BLg"/>
+                            <constraint firstItem="vds-6o-Z9e" firstAttribute="centerY" secondItem="1xQ-i0-7Tb" secondAttribute="centerY" id="VHh-Ts-TaJ"/>
+                            <constraint firstAttribute="trailing" secondItem="vds-6o-Z9e" secondAttribute="trailing" constant="72" id="Wld-1K-mql"/>
+                            <constraint firstItem="1xQ-i0-7Tb" firstAttribute="top" secondItem="sUZ-PH-DpA" secondAttribute="bottom" constant="20" id="egC-gK-A3M"/>
+                            <constraint firstAttribute="trailing" secondItem="q3f-dI-itN" secondAttribute="trailing" id="ixc-Kh-6oB"/>
+                            <constraint firstItem="IrM-eC-73g" firstAttribute="top" secondItem="hSV-vk-n2y" secondAttribute="bottom" constant="20" id="ofZ-OA-1Dj"/>
+                            <constraint firstItem="q3f-dI-itN" firstAttribute="top" secondItem="sUZ-PH-DpA" secondAttribute="bottom" constant="20" id="teG-Dh-AzL"/>
+                            <constraint firstItem="sUZ-PH-DpA" firstAttribute="top" secondItem="iAU-b0-SmR" secondAttribute="bottom" constant="24" id="wHC-cv-7oJ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L75-pH-A1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="567" y="-211"/>
+            <point key="canvasLocation" x="565.60000000000002" y="-211.84407796101951"/>
         </scene>
         <!--ChatVC-->
         <scene sceneID="E02-Z9-PHw">
             <objects>
                 <viewController id="tJc-q8-ZUo" customClass="ChatVC" customModule="Smack_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AtT-wb-BNw"/>
+                        <viewControllerLayoutGuide type="bottom" id="hvV-bi-Ajv"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gBf-4r-A5G">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lkm-cY-Ba5">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lkm-cY-Ba5" customClass="GradientView" customModule="Smack_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Or0-2q-eGG">
                                         <rect key="frame" x="12" y="40" width="24" height="18"/>
@@ -69,7 +136,7 @@
                                         <state key="normal" image="smackBurger"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnH-Lj-RtQ">
-                                        <rect key="frame" x="174" y="34" width="67" height="30.333333333333329"/>
+                                        <rect key="frame" x="154.5" y="34" width="67" height="30.5"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -87,11 +154,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Lkm-cY-Ba5" firstAttribute="leading" secondItem="6wp-OR-dfB" secondAttribute="leading" id="DL5-sn-ldW"/>
+                            <constraint firstItem="Lkm-cY-Ba5" firstAttribute="leading" secondItem="gBf-4r-A5G" secondAttribute="leading" id="DL5-sn-ldW"/>
                             <constraint firstItem="Lkm-cY-Ba5" firstAttribute="top" secondItem="gBf-4r-A5G" secondAttribute="top" id="Vt2-2Q-mUP"/>
-                            <constraint firstItem="6wp-OR-dfB" firstAttribute="trailing" secondItem="Lkm-cY-Ba5" secondAttribute="trailing" id="tDC-4W-SoV"/>
+                            <constraint firstAttribute="trailing" secondItem="Lkm-cY-Ba5" secondAttribute="trailing" id="tDC-4W-SoV"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6wp-OR-dfB"/>
                     </view>
                     <connections>
                         <outlet property="menuBtn" destination="Or0-2q-eGG" id="yBd-1f-tG3"/>
@@ -103,6 +169,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addChannelButton" width="22" height="22"/>
+        <image name="profileDefault" width="192" height="192"/>
         <image name="smackBurger" width="40" height="40"/>
     </resources>
 </document>
