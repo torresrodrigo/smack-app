@@ -16,10 +16,13 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
-
-   
+    
+    @IBOutlet weak var newAccount: UIButton!
+    @IBAction func newAccountWasPressed() {
+        performSegue(withIdentifier: TO_ACCOUNT, sender: nil)
+    }
+    
+    
 
 }
